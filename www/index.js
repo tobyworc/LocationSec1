@@ -36,12 +36,20 @@ function successPosition(position) {
 	var latitude = position.coords.latitude;
 	var longitude = position.coords.longitude;
 	var accuracy = position.coords.accuracy;
+	var altitude = position.coords.altitude;
+	var altAccuracy = position.coords.altitudeAccuracy;
+	var heading = position.coords.heading;
+	var speed = position.coords.speed;
 	
 	//OK. Now we want to update the display with the correct values
 	$('#time').val("Recieved data at " + time);
 	$('#lattext').val("Latitude is " + latitude);
 	$('#longtext').val("Longitude is " + longitude);
 	$('#accuracy').val("Accuracy is " + accuracy);
+	$('#altitude').val("Altitude is " + altitude);
+	$('#altAccuracy').val("Altitude accuracy is " + altAccuracy);
+	$('#heading').val("Heading is " + heading);
+	$('#speed').val("Speed is " + speed);
 }
 
 //called if the position is not obtained correctly
